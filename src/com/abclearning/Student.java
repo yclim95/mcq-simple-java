@@ -1,19 +1,21 @@
 package com.abclearning;
 
 public class Student {
-    private String name; //Data Encapsulation
+    private final String name; //Data Encapsulation
     private double totalScore; //Data Encapsulation
 
+    //Data Encapsulation
     public Student(String name) {
         this.name = name;
     }
 
+    //Data Encapsulation
     public String getName() {
         return this.name;
-    } //Data Encapsulation
+    }
 
     public void setCalculatedScore(int correct, int numQuestion) {
-        this.totalScore = (correct / numQuestion) * 100;
+        this.totalScore = (double)(correct / numQuestion) * 100;
     }
 
     public void displayScore(String name, int correctQ, int wrongQ, int numQuestion) {

@@ -51,22 +51,22 @@ public class MCQSystem {
 
         if (courseSelection == 1) { //If it is Java MCQ
             //Create JavaMCQ Object - abstract class (run-time polymorphism)
-            javaMCQ = new JavaMCQ("src\\com\\abclearning\\java.csv");
+            javaMCQ = new JavaMCQ();
             // read & MCQ Question & Prompt for answer - Method override
             javaMCQ.readMCQuestion(input, student);
         } else if (courseSelection == 2) { //If it is HTML MCQ
             //Create HtmlMCQ Object - abstract class (run-time polymorphism)
-            htmlMCQ = new HtmlMCQ("src\\com\\abclearning\\html.csv");
+            htmlMCQ = new HtmlMCQ();
             // read & MCQ Question & Prompt for answer - Method override
             htmlMCQ.readMCQuestion(input, student);
         } else if (courseSelection == 3) { //If it is Excel MCQ
             //Create ExcelMCQ Object - abstract class (run-time polymorphism)
-            excelMCQ = new ExcelMCQ("src\\com\\abclearning\\excel.csv");
+            excelMCQ = new ExcelMCQ();
             // read & MCQ Question & Prompt for answer - Method override
             excelMCQ.readMCQuestion(input, student);
         } else if (courseSelection == 4) {//If it is .NET MCQ
             //Create DotNetMCQ Object - abstract class (run-time polymorphism)
-            dotNetMCQ = new DotNetMCQ("src\\com\\abclearning\\dotnet.csv");
+            dotNetMCQ = new DotNetMCQ();
             // read & MCQ Question & Prompt for answer - Method override
             dotNetMCQ.readMCQuestion(input, student);
         }
