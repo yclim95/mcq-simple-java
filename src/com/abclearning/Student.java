@@ -1,20 +1,22 @@
 package com.abclearning;
 
 public class Student {
-    private String name;
-    private double totalScore;
-    public Student(String name){
+    private String name; //Data Encapsulation
+    private double totalScore; //Data Encapsulation
+
+    public Student(String name) {
         this.name = name;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
-    }
-    public void setCalculatedScore(int correct, int numQuestion){
-        this.totalScore = (correct/numQuestion)*100;
+    } //Data Encapsulation
+
+    public void setCalculatedScore(int correct, int numQuestion) {
+        this.totalScore = (correct / numQuestion) * 100;
     }
 
-    public void displayScore(String name, int correctQ, int wrongQ, int numQuestion){
+    public void displayScore(String name, int correctQ, int wrongQ, int numQuestion) {
         setCalculatedScore(correctQ, numQuestion);
         System.out.println("\nScore");
 
