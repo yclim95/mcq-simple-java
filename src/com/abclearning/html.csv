@@ -1,1 +1,10 @@
-1. HTML stands for?,a. Hyper Text Markup Language,b. High Text Markup Language,c. Hyper Tabular Markup Language,d. None of these,a,a. Hyper Text Markup Language
+1) HTML stands for?,a. Hyper Text Markup Language,b. High Text Markup Language,c. Hyper Tabular Markup Language,d. None of these,a,a. Hyper Text Markup Language
+2) which of the following tag is used to mark a beginning of paragraph ?,a. <TD>,b. <br>,c. <P>,d. <TR>,c,c. <P>
+3) From which tag descriptive list starts ?,a. <LL>,b. <DD>,c. <DL>,d. <DS>,c,c. <DL>
+4) Correct HTML tag for the largest heading is,a. <head>,b. <h6>,c. <heading>,d. <h1>,d,d. <h1>
+5) The attribute of <form> tag,a. Method,b. Action,c. Both (a)&(b),d. None of these,c,c. Both (a)&(b)
+6) Markup tags tell the web browser,a. How to organise the page,b. How to display the page,c. How to display message box on page,d. None of these,b,b. How to display the page
+7) www is based on which model?,a. Local-server,b. Client-server,c. 3-tier,d. None of these,b,b. Client-server
+8) What are Empty elements and is it valid?,a. No. There is no such terms as Empty Element,b. Empty elements are element with no data,c. No. It is not valid to use Empty Element,d. None of these,b,b. Empty elements are element with no data
+9) Which of the following attributes of text box control allow to limit the maximum character?,a. size,b. len,c. maxlength,d. all of these,c,c. maxlength
+10) Web pages starts with which of the following tag?,a. <Body>,b. <Title>,c. <HTML>,d. <Form>,c,c. <HTML>

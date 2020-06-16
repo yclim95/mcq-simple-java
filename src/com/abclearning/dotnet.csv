@@ -1,1 +1,10 @@
-1. .NET Framework Is An Internal _____ Component That Supports The Execution Of Applications Created By Using Various Programming Languages,a. Internet,b. Windows,c. Hardware,d. language,b,b. Windows
+1) .NET Framework Is An Internal _____ Component That Supports The Execution Of Applications Created By Using Various Programming Languages,a. Internet,b. Windows,c. Hardware,d. language,b,b. Windows
+2) What Is CLR?,a. Common language runtime,b. Compiler language runtime,c. Compiler library runtime,d. Common library runtime,a,a. Common language runtime
+3) Which Is The Following Is Not A Component Of The CLR?,a. Class loader,b. Garbage collector,c. .NET Framework,d. JIT Compiler,c,c. .NET Framework
+4) Which Of The Following Provides Automatic Memory Management And Resolves The Issue Of Memory Leaks And Invalid Memory References?,a. Security engine,b. Garbage collector,c. JIT compiler,d. Debugger,b,b. Garbage collector
+5) What Is CTS?,a. Common type specification,b. Common type-safe,c. Compiler type structure,d. Common type system,d,d. Common type system
+6) What Is DLL?,a. Dynamic-link language,b. Direct link language,c. Dynamic-link library,d. Direct link library,c,c. Dynamic-link library
+7) Which Of The Following Namespace Provides The Classes That Allow You To Debug Your Application Step By Step?,a. System,b. System .Diagnostics,c. System.Object,d. System.Security,b,System .Diagnostics
+8) What Is GAC?,a. Garbage collector,b. Global assembly collector,c. Global access cache,d. Global assembly cache,d,d. Global assembly cache
+9) What Is COM?,a. Component object model,b. Common object model,c. Computer oriented model,d. Common oriented model,a,a. Component object model
+10) What is the storage Size of Boolean type?,a. 1 byte,b. 2 bytes,c. 8 bytes,d. 16 bytes,b,b. 2 bytes

@@ -9,10 +9,11 @@ public abstract class MCQuestion { //abstract class
 
     // Abstraction (abstract method)
     public abstract String getFileName();
+
     public abstract String getMcqName();
 
     // Inheritance
-    public void readMCQuestion(Scanner input, Student student){
+    public void readMCQuestion(Scanner input, Student student) {
         String csvFile = getFileName();
         String[] mcQuestion;
         String answer;
@@ -25,7 +26,7 @@ public abstract class MCQuestion { //abstract class
 
         try {
             fileReader = new BufferedReader(new FileReader(csvFile));
-            System.out.println("\n" + this.getMcqName()  + " MCQ Question");
+            System.out.println("\n" + this.getMcqName() + " MCQ Question");
 
             // Keep looping until no more row to read
             while ((line = fileReader.readLine()) != null) {
@@ -34,15 +35,14 @@ public abstract class MCQuestion { //abstract class
                         "\n" + mcQuestion[3] + "\n" + mcQuestion[4]);
 
                 System.out.print("\nYour answer is: ");
-                input.nextLine();  // Consume newline left-over
-                answer = input.nextLine();
+                answer = input.next();
 
                 if (mcQuestion[5].equals(answer.toLowerCase())) {
-                    System.out.println("Well Done");
+                    System.out.println("WELL DONE!\n");
                     correctA++;
                 } else {
-                    System.err.println("\nWrong answer");
-                    System.out.println("The correct Answer is: " + mcQuestion[6]);
+                    System.out.print("WRONG ANSWER.");
+                    System.out.println("The correct Answer is: " + mcQuestion[6] + "\n");
                     wrongA++;
                 }
                 numQ++;

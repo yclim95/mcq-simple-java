@@ -1,1 +1,10 @@
 1) Which of the following option leads to the portability and security of Java?,a. Bytecode is executed by JVM,b. The applet makes the Java code secure and portable,c. Use of exception handling,d. Dynamic binding between objects,a,a. Bytecode is executed by JVM
+2) Which of the following is not a Java features?,a. Dynamic,b. Architecture Neutral,c. Use of pointers,d. Object-oriented,c,c. Use of pointers
+3) The \u0021 article referred to as a,a. Unicode escape sequence,b. Octal escape,c. Hexadecimal,d. Line feed,a,a. Unicode escape sequence
+4) _____ is used to find and fix bugs in the Java programs.,a. JVM,b. JRE,c. JDK,d. JDB,d,d. JDB
+5) Which of the following is a valid declaration of a char?,a. char ch = '\utea';,b. char ca = 'tea';,c. char cr = \u0223;,d. char cc = '\itea',a,a.char ch = '\utea'
+6) What is the return type of the hashCode() method in the Object class?,a. Object,b. int,c. long,d. void,b,b. int
+7) Which of the following is a valid long literal?,a. ABH8097,b. L990023,c. 904423,d. 0xnf029L,d,d. 0xnf029L
+8. What does the expression float a = 35 / 0 return?,a. 0,b. Not a Number,c. Infinity,d. Run time exception,c,c. Infinity
+9. Evaluate the following Java expression; if x=3; y=5; and z=10; ++z + y - y + z + x++,a. 24,b. 23,c. 20,d. 25,a,a. 24
+10. Which of the following tool is used to generate API documentation in HTML format from doc comments in source code?,a. javap tool,b. javaw command,c. Javadoc tool,d. javah command,c,c. Javadoc tool
