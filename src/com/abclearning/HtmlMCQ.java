@@ -1,6 +1,6 @@
 package com.abclearning;
 
-public class HtmlMCQ extends MCQuestion {
+public class HTMLMCQ extends MCQuestion {
     // abstraction and method overriding
     @Override
     public String getFileName() {

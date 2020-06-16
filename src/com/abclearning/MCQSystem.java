@@ -13,9 +13,7 @@ public class MCQSystem {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-
-        //Initialize
-        String reload;
+        String reload; // Prompt user's input if want to continue
         //Start
         do {
             System.out.println("ABC Learning Centre");
@@ -23,8 +21,7 @@ public class MCQSystem {
             System.out.print("\nEnter 'y' if want to continue again!: ");
             reload = input.next();
             System.out.println();
-        } while (reload.toUpperCase().equals("Y"));
-
+        } while (reload.toUpperCase().equals("Y")); // While is equal to 'y'
     }
 
     public static void displayCourse() {
@@ -53,7 +50,7 @@ public class MCQSystem {
                 courseSelection = input.nextInt();
                 valid = true;
             }catch (Exception e){
-                input.nextLine();
+                input.nextLine(); // Clear input buffer
                 System.out.println("\nInvalid Input." + "Please enter [1-4] only.\n");
                 valid = false;
             }
@@ -66,7 +63,7 @@ public class MCQSystem {
             javaMCQ.readMCQuestion(input, student);
         } else if (courseSelection == 2) { //If it is HTML MCQ
             //Create HtmlMCQ Object - abstract class (run-time polymorphism)
-            htmlMCQ = new HtmlMCQ();
+            htmlMCQ = new HTMLMCQ();
             // read & MCQ Question & Prompt for answer - Inheritance
             htmlMCQ.readMCQuestion(input, student);
         } else if (courseSelection == 3) { //If it is Excel MCQ
@@ -80,9 +77,9 @@ public class MCQSystem {
             // read & MCQ Question & Prompt for answer - Inheritance
             dotNetMCQ.readMCQuestion(input, student);
         }else{
-            input.nextLine();
+            input.nextLine(); // Clear input buffer
             System.out.println("\nInvalid Selection. Please enter [1-4] only.\n");
-            displayMCQ();
+            displayMCQ(); // Display MCQ
         }
 
     }

@@ -14,15 +14,15 @@ public abstract class MCQuestion { //abstract class
 
     // Inheritance
     public void readMCQuestion(Scanner input, Student student) {
-        String csvFile = getFileName();
-        String[] mcQuestion;
-        String answer;
-        String line;
-        String csvSplitBy = ",";
-        int correctA = 0;
-        int wrongA = 0;
-        int numQ = 0;
-        BufferedReader fileReader;
+        String csvFile = getFileName(); // Retrieve CSV Filename
+        String[] mcQuestion; // Store MCQuestion in an array
+        String answer; // user's input for answer
+        String line; // Each line in CSV File
+        String csvSplitBy = ","; // csv splitter to break to different point
+        int correctA = 0; // Number of Correct Answer
+        int wrongA = 0; // Number of Wrong Answer
+        int numQ = 0; // Total Number of question
+        BufferedReader fileReader; // Read CSV File
         boolean valid; // use to check if user's input is valid
 
         try {
@@ -33,24 +33,24 @@ public abstract class MCQuestion { //abstract class
             while ((line = fileReader.readLine()) != null) {
                 mcQuestion = line.split(csvSplitBy);
                 System.out.println(mcQuestion[0] + "\n" + mcQuestion[1] + "\n" + mcQuestion[2] +
-                        "\n" + mcQuestion[3] + "\n" + mcQuestion[4]);
+                        "\n" + mcQuestion[3] + "\n" + mcQuestion[4]); //display MCQ
 
 
                do{
                    System.out.print("\nYour answer is: ");
                    answer = input.next();
-                   if (mcQuestion[5].equals(answer.toLowerCase())) {
+                   if (mcQuestion[5].equals(answer.toLowerCase())) { // mcq answer == user's answer
                        System.out.println("WELL DONE!\n");
                        correctA++;
                        valid = true;
                    } else if (!(mcQuestion[5].equals(answer.toLowerCase())) && (answer.toLowerCase().equals("a") ||
                            answer.toLowerCase().equals("b") || answer.toLowerCase().equals("c") ||
-                           answer.toLowerCase().equals("d"))){
+                           answer.toLowerCase().equals("d"))){ // mcq answer != user's answer && == "a" "b" "c" "d"
                        System.out.print("WRONG ANSWER!");
                        System.out.println("The correct Answer is: " + mcQuestion[6] + "\n");
                        wrongA++;
                        valid = true;
-                   }else{
+                   }else{ // Other than the above
                        System.out.println("INVALID INPUT. Please enter only [a-d]!");
                        valid = false;
                    }
@@ -63,6 +63,6 @@ public abstract class MCQuestion { //abstract class
         }
         this.student = student; // Set this.student = student (Reference) - Aggregation
         // this.student.getName() -> encapsulation
-        this.student.displayScore(this.student.getName(), correctA, wrongA, numQ);
+        this.student.displayScore(this.student.getName(), correctA, wrongA, numQ); // Display score
     }
 }
