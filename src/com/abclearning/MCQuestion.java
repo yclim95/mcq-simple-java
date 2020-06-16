@@ -23,6 +23,7 @@ public abstract class MCQuestion { //abstract class
         int wrongA = 0;
         int numQ = 0;
         BufferedReader fileReader;
+        boolean valid; // use to check if user's input is valid
 
         try {
             fileReader = new BufferedReader(new FileReader(csvFile));
@@ -34,18 +35,28 @@ public abstract class MCQuestion { //abstract class
                 System.out.println(mcQuestion[0] + "\n" + mcQuestion[1] + "\n" + mcQuestion[2] +
                         "\n" + mcQuestion[3] + "\n" + mcQuestion[4]);
 
-                System.out.print("\nYour answer is: ");
-                answer = input.next();
 
-                if (mcQuestion[5].equals(answer.toLowerCase())) {
-                    System.out.println("WELL DONE!\n");
-                    correctA++;
-                } else {
-                    System.out.print("WRONG ANSWER.");
-                    System.out.println("The correct Answer is: " + mcQuestion[6] + "\n");
-                    wrongA++;
-                }
-                numQ++;
+               do{
+                   System.out.print("\nYour answer is: ");
+                   answer = input.next();
+                   if (mcQuestion[5].equals(answer.toLowerCase())) {
+                       System.out.println("WELL DONE!\n");
+                       correctA++;
+                       valid = true;
+                   } else if (!(mcQuestion[5].equals(answer.toLowerCase())) && (answer.toLowerCase().equals("a") ||
+                           answer.toLowerCase().equals("b") || answer.toLowerCase().equals("c") ||
+                           answer.toLowerCase().equals("d"))){
+                       System.out.print("WRONG ANSWER!");
+                       System.out.println("The correct Answer is: " + mcQuestion[6] + "\n");
+                       wrongA++;
+                       valid = true;
+                   }else{
+                       System.out.println("INVALID INPUT. Please enter only [a-d]!");
+                       valid = false;
+                   }
+               }while(!valid); // While is not valid, keep prompting user for input
+                numQ++; // Increment Number of Question ~ to get Total Number of Question
+
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -42,13 +42,22 @@ public class MCQSystem {
         MCQuestion htmlMCQ; //Initialize class datatype
         MCQuestion excelMCQ; //Initialize class datatype
         MCQuestion dotNetMCQ; //Initialize class datatype
-        int courseSelection;
+        int courseSelection = 0; // user's input for selection of course
+        boolean valid; // use to check if user's input is valid
 
         System.out.print("Enter Your Name: ");
         student = new Student(input.nextLine()); //Create student object
-        displayCourse();
-
-        courseSelection = input.nextInt();
+        do{
+            try{
+                displayCourse(); // Display course list
+                courseSelection = input.nextInt();
+                valid = true;
+            }catch (Exception e){
+                input.nextLine();
+                System.out.println("\nInvalid Input." + "Please enter [1-4] only.\n");
+                valid = false;
+            }
+        }while(!valid); // While is not valid, keep prompting user for input
 
         if (courseSelection == 1) { //If it is Java MCQ
             //Create JavaMCQ Object - abstract class (run-time polymorphism)
@@ -70,6 +79,10 @@ public class MCQSystem {
             dotNetMCQ = new DotNetMCQ();
             // read & MCQ Question & Prompt for answer - Inheritance
             dotNetMCQ.readMCQuestion(input, student);
+        }else{
+            input.nextLine();
+            System.out.println("\nInvalid Selection. Please enter [1-4] only.\n");
+            displayMCQ();
         }
 
     }
