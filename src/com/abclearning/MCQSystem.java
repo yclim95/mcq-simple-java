@@ -20,6 +20,7 @@ public class MCQSystem {
             displayMCQ();
             System.out.print("\nEnter 'y' if want to continue again!: ");
             reload = input.next();
+            input.nextLine(); // Clear input buffer
             System.out.println();
         } while (reload.toUpperCase().equals("Y")); // While is equal to 'y'
     }
@@ -44,17 +45,17 @@ public class MCQSystem {
 
         System.out.print("Enter Your Name: ");
         student = new Student(input.nextLine()); //Create student object
-        do{
-            try{
+        do {
+            try {
                 displayCourse(); // Display course list
                 courseSelection = input.nextInt();
                 valid = true;
-            }catch (Exception e){
+            } catch (Exception e) {
                 input.nextLine(); // Clear input buffer
                 System.out.println("\nInvalid Input." + "Please enter [1-4] only.\n");
                 valid = false;
             }
-        }while(!valid); // While is not valid, keep prompting user for input
+        } while (!valid); // While is not valid, keep prompting user for input
 
         if (courseSelection == 1) { //If it is Java MCQ
             //Create JavaMCQ Object - abstract class (run-time polymorphism)
@@ -76,7 +77,7 @@ public class MCQSystem {
             dotNetMCQ = new DotNetMCQ();
             // read & MCQ Question & Prompt for answer - Inheritance
             dotNetMCQ.readMCQuestion(input, student);
-        }else{
+        } else {
             input.nextLine(); // Clear input buffer
             System.out.println("\nInvalid Selection. Please enter [1-4] only.\n");
             displayMCQ(); // Display MCQ

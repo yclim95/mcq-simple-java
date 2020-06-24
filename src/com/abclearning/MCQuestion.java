@@ -63,6 +63,9 @@ public abstract class MCQuestion { //abstract class
         }
         this.student = student; // Set this.student = student (Reference) - Aggregation
         // this.student.getName() -> encapsulation
-        this.student.displayScore(this.student.getName(), correctA, wrongA, numQ); // Display score
+        this.student.setNumCorrectAns(correctA); // Set Total Number of Correct Answered Question(s)
+        this.student.setNumWrongAns(wrongA); // Set Total Number of Wrong Answered Question(s)
+        this.student.setNumQuestionAns(numQ); // Set Total Number of Answered Question(s)
+        this.student.displayScore(); // Display score
     }
 }
